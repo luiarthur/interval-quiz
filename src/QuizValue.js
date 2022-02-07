@@ -1,22 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 
-export default class QuizValue extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      hidden: false
-    }
-  }
+export function QuizValue(props) {
+  const [hidden, setHidden] = useState(false)
 
-  toggleHide = () => {
-    this.setState({hidden: !this.state.hidden})
-  }
+  const toggleHide = () => setHidden(!hidden)
 
-  render() {
-    return (
-      <i className="QuizValue" onClick={this.toggleHide}>
-        {this.state.hidden ? " ___ " : this.props.value}
-      </i>
-    )  
-  }
+  return (
+    <i className="QuizValue" onClick={toggleHide}>
+      {hidden ? " ___ " : props.value}
+    </i>
+  )  
 }

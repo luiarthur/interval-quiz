@@ -1,4 +1,4 @@
-export default function NextBtn(props) {
+export function NextBtn(props) {
   return (
     <button onClick={props.onClick}>
       Next
