@@ -1,4 +1,7 @@
-// function NextBtn(props) {
-// }
-// 
-// export NextBtn
+export default function NextBtn(props) {
+  return (
+    <button>
+      Next
+    </button>
+  )
+}
