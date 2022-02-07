@@ -1,5 +1,6 @@
 # interval-quiz
 [![Build and Deploy][ci-img]](https://github.com/luiarthur/interval-quiz/actions)
+
 Quiz webapp for music intervals
 
 
