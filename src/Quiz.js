@@ -10,13 +10,13 @@ class Note {
   }
 
   plus(interval) {
-    interval.value == "7" && (interval = new Interval(7, "b"))
-    interval.value == "M7" && (interval = new Interval(7, ""))
+    interval.value === "7" && (interval = new Interval(7, "b"))
+    interval.value === "M7" && (interval = new Interval(7, ""))
 
     let currentPos = indexOfLetterNameWithAcc(this.value)
     let newPos = currentPos + semitones[interval.degree]
-    interval.acc == "#" && (newPos += 1)
-    interval.acc == "b" && (newPos -= 1)
+    interval.acc === "#" && (newPos += 1)
+    interval.acc === "b" && (newPos -= 1)
     while (newPos >= letterNamesWithAcc.length) {
       newPos -= 12
     }
