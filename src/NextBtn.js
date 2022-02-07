@@ -1,6 +1,6 @@
 export default function NextBtn(props) {
   return (
-    <button>
+    <button onClick={props.onClick}>
       Next
     </button>
   )
