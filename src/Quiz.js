@@ -10,7 +10,6 @@ class Note {
   }
 
   plus(interval) {
-    interval.value === "7" && (interval = new Interval(7, "b"))
     interval.value === "M7" && (interval = new Interval(7, ""))
 
     let currentPos = indexOfLetterNameWithAcc(this.value)
@@ -89,7 +88,7 @@ function randomNote() {
 const intervals = [
   new Interval(3, "b"), new Interval(3, ""),
   new Interval(5, "b"), new Interval(5, ""), new Interval(5, "#"),
-  new Interval(7, ""), new Interval(7, "M"),
+  new Interval(7, "b"), new Interval(7, "M"),
   new Interval(9, "b"), new Interval(9, ""), new Interval(9, "#"),
   new Interval(11, ""), new Interval(11, "#"),
   new Interval(13, "b"), new Interval(13, ""),
