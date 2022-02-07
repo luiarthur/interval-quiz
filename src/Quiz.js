@@ -134,6 +134,7 @@ export default class Quiz extends React.Component {
         of
         <QuizValue value={" " + this.state.y} />.
         <br/>
+        <br/>
         <NextBtn onClick={this.generateRandomValues}/>
       </div>
     )
