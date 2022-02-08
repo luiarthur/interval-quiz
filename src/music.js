@@ -8,7 +8,7 @@ class Note {
   plus(interval) {
     interval.value === "M7" && (interval = new Interval(7, ""))
 
-    let currentPos = indexOfLetterNameWithAcc(this.value)
+    const currentPos = indexOfLetterNameWithAcc(this.value)
     let newPos = currentPos + semitones[interval.degree]
     interval.acc === "#" && (newPos += 1)
     interval.acc === "b" && (newPos -= 1)
@@ -16,7 +16,7 @@ class Note {
       newPos -= 12
     }
 
-    let newNote = randomChoice(letterNamesWithAcc[newPos])
+    const newNote = randomChoice(letterNamesWithAcc[newPos])
     switch (newNote) {
       case "#":
         return new Note(newNote.slice(0, -1), "#")
